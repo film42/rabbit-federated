@@ -7,8 +7,8 @@ The example builds 3 rabbitmq nodes: rabbit1, rabbit2, and rabbit3.
 
 Running `docker compose up` will start the rabbitmq nodes.
 
-You then need to connect the rabbitmq nodes together using `./federate-queues.sh` which creates a bi-directional link
-between the nodes: 1 to 2, 2 to 3, and 3 to 1.
+You then need to connect the rabbitmq nodes together using `ruby federate-queues.rb` which creates a federated queue
+connected to all other nodes: 1 -> [2,3], 2 -> [1,3], 3 -> [1,2].
 
 Note: There's a `./federate-exchange.sh` as well, but it's only there for reference.
 

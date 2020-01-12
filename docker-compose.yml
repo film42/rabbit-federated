@@ -4,7 +4,7 @@ services:
     image: rabbitmq:management-alpine
     hostname: rabbit1
     environment:
-      RABBITMQ_ERLANG_COOKIE: "test_cluster"
+      RABBITMQ_ERLANG_COOKIE: "test_cluster1"
     ports:
       - "4369"
       - "5672"
@@ -13,7 +13,7 @@ services:
     image: rabbitmq:management-alpine
     hostname: rabbit2
     environment:
-      RABBITMQ_ERLANG_COOKIE: "test_cluster"
+      RABBITMQ_ERLANG_COOKIE: "test_cluster2"
     ports:
       - "4369"
       - "5672"
@@ -22,7 +22,7 @@ services:
     image: rabbitmq:management-alpine
     hostname: rabbit3
     environment:
-      RABBITMQ_ERLANG_COOKIE: "test_cluster"
+      RABBITMQ_ERLANG_COOKIE: "test_cluster3"
     ports:
       - "4369"
       - "5672"

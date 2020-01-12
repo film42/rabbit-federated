@@ -3,6 +3,8 @@ require "bunny"
 cluster = ARGV[0] || "rabbit2"
 rabbit_port = `docker-compose port #{cluster} 5672`.strip.split(":").last.to_i
 
+puts "Publishing to: #{cluster}:#{rabbit_port}"
+
 conn = Bunny.new(hosts: ["0.0.0.0"], port: rabbit_port, heartbeat_timeout: 8)
 conn.start
 
